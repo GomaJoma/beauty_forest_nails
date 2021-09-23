@@ -7,7 +7,7 @@ def index(request):
 
 
 def rules(request):
-    return HttpResponse('this is rules page')
+    return render(request, 'main/rules.html', None)
 
 
 def reviews(request):

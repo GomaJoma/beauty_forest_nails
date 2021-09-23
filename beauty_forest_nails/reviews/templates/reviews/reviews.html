@@ -1,0 +1,17 @@
+{%  extends 'basis.html' %}
+{% block title %}
+	Our reviews
+{% endblock %}
+{% block content %}
+	<h3>You could see what peoples talk about us</h3>
+	<p>Contrary to popular belief, Lorem Ipsum is not simply random text.
+		It has roots in a piece of classical Latin literature from 45 BC,
+		making it over 2000 years old. Richard McClintock, a Latin professor
+		a.</p>
+	{% for review in reviews_list %}
+		{{ review.text }}<br>
+		{{ review.pub_date }}<br>
+		{{ review.author }}<br>
+		<br>
+	{% endfor %}
+{% endblock %}

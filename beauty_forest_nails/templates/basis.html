@@ -8,6 +8,17 @@
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
+	<header>
+		<div class="menu">
+			<a href="{% url 'index' %}">Home</a>
+			<a href="{% url 'services' %}">Services</a>
+			<a href="{% url 'rules' %}">Rules</a>
+			<a href="{% url 'reviews' %}">Reviews</a>
+			<a href="{% url 'about_us' %}">About Us</a>
+			<a href="{% url 'contacts' %}">Contacts</a>
+			<a href="{% url 'admin:index' %}">ADMIN PANEL</a>
+		</div>
+	</header>
     <div class="content">
         {% block content %}
         {% endblock %}
