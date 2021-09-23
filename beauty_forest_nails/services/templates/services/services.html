@@ -1,0 +1,16 @@
+{%  extends 'basis.html' %}
+{% block title %}
+	Our contacts
+{% endblock %}
+{% block content %}
+	<h3>Take a look on our services</h3>
+	<p>TIt is  infancy. Various
+		versions have evolved over the years, sometimes by accident,
+		sometimes on purpose (injected humour and the like).</p>
+	{% for service in services_list %}
+		<h6>{{ service.name }}</h6>
+		{{ service.price }}
+		<br>
+	{% endfor %}
+
+{% endblock %}
