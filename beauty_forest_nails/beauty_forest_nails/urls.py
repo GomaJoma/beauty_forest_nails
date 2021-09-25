@@ -9,5 +9,6 @@ urlpatterns = [
     path('reviews/', include('reviews.urls')),
     path('about/', views.about_us, name='about_us'),
     path('contacts/', views.contacts, name='contacts'),
+    path('auth/', include('auth_reg.urls')),
     path('admin/', admin.site.urls),
 ]
