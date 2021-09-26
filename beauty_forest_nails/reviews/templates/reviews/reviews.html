@@ -15,12 +15,18 @@
 		<br>
 	{% endfor %}
 
-
-	<h3>Add new review here please</h3>
-	<form method="POST">
-		{% csrf_token %}
-		{{ form.text }}<br>
-		<button type="submit">Add review</button>
-	</form>
-	<p>{{ error }}</p>
+	{% if user.is_authenticated %}
+		<h3>Add new review here please</h3>
+		<form method="POST">
+			{% csrf_token %}
+			{{ form.text }}<br>
+			<button type="submit">Add review</button>
+		</form>
+		<p>{{ error }}</p>
+	{% else %}
+		<p>Dear {{ user }}, please
+			<a href="{% url 'login' %}?next={{request.path}}">LogIn</a>
+			to add your review.
+		</p>
+	{% endif %}
 {% endblock %}

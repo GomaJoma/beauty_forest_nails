@@ -5,7 +5,10 @@ from .forms import CustomUserCreationForm, UserAuthenticationForm
 
 def auth_login(request):
     error = ''
+    print(request.path)
+    print(request.GET.get('next'))
     if request.method == 'POST':
+        print(request.path)
         form = UserAuthenticationForm(request, request.POST)
         if form.is_valid():
             username = request.POST['username']
@@ -16,7 +19,7 @@ def auth_login(request):
             )
             if user is not None:
                 login(request, user)
-                return redirect('index')
+                return redirect(request.GET.get('next'))
             else:
                 error = 'Invalid login'
         else:
@@ -53,5 +56,5 @@ def register(request):
 
 def logout_view(request):
     logout(request)
-    return redirect('index')
+    return redirect(request.GET.get('next'))
 
