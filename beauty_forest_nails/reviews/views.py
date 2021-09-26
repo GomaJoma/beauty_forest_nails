@@ -1,10 +1,10 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_list_or_404
 from .models import Review
 from .forms import AddReviewForm
 
 
 def reviews(request):
-    reviews_list = Review.objects.all()
+    reviews_list = get_list_or_404(Review)
 
     error = ''
     if request.method == 'POST':

@@ -1,4 +1,3 @@
-from django.http import HttpResponse
 from django.shortcuts import render
 
 
@@ -8,10 +7,6 @@ def index(request):
 
 def rules(request):
     return render(request, 'main/rules.html', None)
-
-
-def reviews(request):
-    return HttpResponse('this is reviews page')
 
 
 def about_us(request):
