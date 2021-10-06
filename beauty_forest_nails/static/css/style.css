@@ -1,0 +1,393 @@
+* {
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+p {
+    line-height: 1.25;
+}
+
+/*@font-face {*/
+/*    font-family: 'OpenSans';*/
+/*    src: url("/fonts/OpenSans-Regular.woff") format("woff");*/
+/*    font-display: swap;*/
+/*    font-weight: 400;*/
+/*    font-style: normal;*/
+/*}*/
+
+
+img {
+    max-width: 100%;
+}
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.btn-reset {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.more-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 60px;
+    margin: 40px auto 0;
+    border-radius: 17px;
+    text-decoration: none;
+    font-size: 24px;
+    color: #333;
+    background-color: #EBEBEB;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease-in-out;
+}
+
+.more-btn:hover {
+    background-color: #333;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.more-btn_white {
+    background-color: #fff;
+}
+
+.header {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+    background-color: #0f0f0f;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header__content {
+    max-width: 1170px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.header__logo {
+    margin-right: 40px;
+}
+
+.header__nav {
+    margin-right: auto;
+}
+
+.header__nav-link {
+    text-decoration: none;
+    margin: 0 5px;
+    padding: 5px 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 7px;
+    transition: all 0.3s ease-in-out;
+}
+
+.header__nav-link:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.header__account-link {
+    width: 30px;
+    height: 30px;
+}
+
+.header__account-link:hover {
+    transform: scale(1.15);
+}
+
+.intro {
+    margin-top: 80px;
+    height: calc(100vh - 80px);
+    background-image: url("../images/index/intro_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Caveat", cursive;
+    color: #fff;
+}
+
+.intro__title {
+    margin: 0;
+    font-weight: 400;
+    font-size: 64px;
+}
+
+.intro__subtitle {
+    font-size: 32px;
+    text-align: center;
+}
+
+
+.section {
+    padding: 60px 0;
+}
+
+.section_gray {
+    background-color: #EBEBEB;
+}
+
+.section__container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section__title {
+    margin: 0 0 60px;
+    width: 100%;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+}
+
+.section__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+}
+
+.services__link {
+    --link-height: 540px;
+    max-width: 360px;
+    height: var(--link-height);
+    display: block;
+    text-decoration: none;
+    font-family: "Caveat", cursive;
+    font-size: 28px;
+    color: #fff;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100%;
+    transition: transform 0.3s;
+}
+
+.services__link_mask {
+    width: 100%;
+    height: var(--link-height);
+    text-align: center;
+    padding-top: calc(var(--link-height) / 2);
+    transition: background-color 0.3s;
+}
+
+.services__link_mask:hover {
+    background: rgba(51, 51, 51, 0.5);
+}
+
+.services__link:hover {
+    transform: scale(1.075);
+}
+
+.services__link_manicure {
+    background-image: url("../images/index/manicure.jpg");
+}
+
+.services__link_pedicure {
+    background-image: url("../images/index/pedicure.jpg");
+}
+
+.services__link_design {
+    background-image: url("../images/index/design.jpg");
+}
+
+.about__content {
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /*align-items: center;*/
+    padding: 0 40px;
+}
+
+.about__text {
+    margin: 0 40px 0 0;
+    max-width: 500px;
+}
+
+.about__image {
+    max-width: 250px;
+}
+
+.reviews__list {
+    /*margin-bottom: 40px;*/
+}
+
+.reviews__item{
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EBEBEB;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.reviews__item-title {
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.reviews__text {
+    margin: 0 0 auto;
+    padding: 0 25px 20px;
+}
+
+.reviews__link {
+    display: block;
+    width: 100%;
+    padding-bottom: 20px;
+    text-decoration: none;
+    font-family: "Caveat", cursive;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #000;
+    transition: all 0.3s ease-in-out;
+}
+
+.reviews__link::before {
+    display: block;
+    content: "";
+    margin: 0 15px 20px;
+    border-top: #333 1px solid;
+    transition: all 0.3s ease-in-out;
+}
+
+.reviews__link:hover {
+    color: #fff;
+    background-color: #333;
+}
+
+.reviews__link:hover::before {
+    margin: 0 0 20px;
+}
+
+.contacts__content {
+    margin: 0 auto;
+    max-width: 980px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contacts__map {
+    width: 350px;
+    height: 350px;
+    margin-right: 40px;
+    border: 0;
+    border-radius: 5px;
+}
+
+.contacts__info {
+    max-width: 480px;
+}
+
+.contacts__visit {
+    padding: 30px 40px;
+    margin-bottom: 20px;
+    background: linear-gradient(180deg, rgba(34, 131, 0, 0.2) 0%, rgba(66, 255, 0, 0.2) 0.01%, rgba(66, 255, 0, 0.064) 52.6%), #FFFFFF;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.contacts__visit-title {
+    margin: 0;
+    font-family: "Caveat", cursive;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+}
+
+.contacts__visit-title:after {
+    display: block;
+    content: "";
+    margin: 10px 50px 0;
+    border-top: #333 1px solid;
+}
+
+.contacts__visit-text {
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.contacts__phone {
+    color: #000;
+    transition: color 0.3s;
+}
+
+.contacts__phone:hover {
+    color: #0067c5;
+}
+
+.contacts__social {
+    max-width: 90px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts__social-link {
+    display: block;
+    content: "";
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease-in-out;
+}
+
+.contacts__social-link:hover {
+    transform: scale(1.2);
+}
+
+.instagram-link {
+    background-image: url("../images/index/instagram.svg");
+}
+
+.whatsapp-link {
+    background-image: url("../images/index/whatsapp.svg");
+}
+
+.footer {
+    height: 60px;
+    padding: 20px 0;
+    text-align: center;
+    background-color: #0f0f0f;
+}
+
+.footer__copyright {
+    font-family: "Caveat", cursive;
+    font-size: 18px;
+    color: #fff;
+}

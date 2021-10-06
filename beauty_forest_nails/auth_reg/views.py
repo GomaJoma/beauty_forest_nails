@@ -3,6 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from .forms import CustomUserCreationForm, UserAuthenticationForm
 
 
+# noinspection PyUnresolvedReferences
 def auth_login(request):
     error = ''
     print(request.path)
@@ -27,7 +28,7 @@ def auth_login(request):
     else:
         form = UserAuthenticationForm()
 
-    context ={
+    context = {
         'form': form,
         'error': error,
     }
@@ -36,6 +37,7 @@ def auth_login(request):
     # pass
 
 
+# noinspection PyUnresolvedReferences
 def register(request):
     error = ''
     if request.method == 'POST':
@@ -57,4 +59,3 @@ def register(request):
 def logout_view(request):
     logout(request)
     return redirect(request.GET.get('next'))
-

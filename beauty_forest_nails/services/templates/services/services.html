@@ -1,7 +1,14 @@
 {%  extends 'basis.html' %}
+{% load static %}
+
+{% block static_files %}
+	<link rel="stylesheet" href="{% static 'services/style.css' %}">
+{% endblock %}
+
 {% block title %}
 	Our services
 {% endblock %}
+
 {% block content %}
 	<h3>Take a look on our services</h3>
 	<p>TIt is  infancy. Various
