@@ -1,122 +1,131 @@
 {%  extends 'basis.html' %}
 {% load static %}
+
+{% block static_files %}
+	<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
 {% block title %}
 	Beauty Forest
 {% endblock %}
+
 {% block content %}
-	<section class="intro">
-		<h1 class="intro__title">Добро пожаловать</h1>
-		<span class="intro__subtitle">Студия маникюра и педикюра <br>Beauty Forest</span>
-	</section>
-	<section class="section services">
-		<div class="section__container">
-			<h2 class="section__title">Услуги</h2>
-			<ul class="list-reset section__grid">
-				<li class="services__item">
-					<a href="{% url 'services' %}" class="services__link services__link_manicure"><div class="services__link_mask">Маникюр</div></a>
-				</li>
-				<li class="services__item">
-					<a href="{% url 'services' %}" class="services__link services__link_pedicure"><div class="services__link_mask">Педикюр</div></a>
-				</li>
-				<li class="services__item">
-					<a href="{% url 'services' %}" class="services__link services__link_design"><div class="services__link_mask">Дизайн</div></a>
-				</li>
-			</ul>
-		</div>
-	</section>
-	<section class="section section_gray about">
-		<div class="section__container">
-			<h2 class="section__title">Немного о нас</h2>
-			<div class="about__content">
-				<p class="about__text">
-					Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
-					Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение
-					шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается
-					при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.."
-					Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
-					Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение
-					шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается
-					при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.."
-				</p>
-				<img src="{% static 'images/index/me.jpg' %}" alt="Our photo" class="about__image">
+	<main>
+		<section class="intro">
+			<h1 class="intro__title">Добро пожаловать</h1>
+			<span class="intro__subtitle">Студия маникюра и педикюра <br>Beauty Forest</span>
+		</section>
+		<section class="section services">
+			<div class="main__container">
+				<h2 class="main__title">Услуги</h2>
+				<ul class="list-reset section__grid">
+					<li class="services__item">
+						<a href="{% url 'services' %}" class="services__link services__link_manicure"><div class="services__link_mask">Маникюр</div></a>
+					</li>
+					<li class="services__item">
+						<a href="{% url 'services' %}" class="services__link services__link_pedicure"><div class="services__link_mask">Педикюр</div></a>
+					</li>
+					<li class="services__item">
+						<a href="{% url 'services' %}" class="services__link services__link_design"><div class="services__link_mask">Дизайн</div></a>
+					</li>
+				</ul>
+				<a href="{% url 'services' %}" class="btn-reset more-btn more-btn_white">Все услуги</a>
 			</div>
-			<a href="{% url 'contacts' %}" class="btn-reset more-btn more-btn_white">Больше про нас</a>
-		</div>
-	</section>
-	<section class="section reviews">
-		<div class="section__container">
-			<h2 class="section__title">Что про нас говорят</h2>
-			<ul class="list-reset section__grid reviews__list">
-				<li class="reviews__item">
-					<h3 class="reviews__item-title">Кристина</h3>
-					<p class="reviews__text">
-						Давно выяснено, что при оценке дизайна и композиции читаемый
-						текст мешает . Lorem Ipsum используют потому,
-						что тот обеспечивает более или менее стандартное заполнение
-						шаблона, а также реальное.
-						Давно выяснено, что при оценке дизайна и композиции читаемый
-						текст мешает . Lorem Ipsum используют потому,
-						что тот обеспечивает более или менее стандартное заполнение
-						шаблона, а также реальное.
+		</section>
+		<section class="section section_gray about">
+			<div class="main__container">
+				<h2 class="main__title">Немного о нас</h2>
+				<div class="about__content">
+					<p class="about__text">
+						Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
+						Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение
+						шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается
+						при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.."
+						Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
+						Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение
+						шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается
+						при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.."
 					</p>
-					<a href="{% url 'reviews' %}" class="reviews__link">Подробнее</a>
-				</li>
-				<li class="reviews__item">
-					<h3 class="reviews__item-title">Лев</h3>
-					<p class="reviews__text">
-						Давно выяснено, что при оценке дизайна и композиции читаемый
-						текст мешает . Lorem Ipsum используют потому,
-						что тот обеспечивает более или менее стандартное заполнение
-						шаблона, а также реальное.
-						Давно выяснено, что при оценке дизайна и композиции читаемый
-						текст мешает . Lorem Ipsum используют потому,
-						что тот обеспечивает более или менее стандартное заполнение
-						шаблона, а также реальное.
-					</p>
-					<a href="{% url 'reviews' %}" class="reviews__link">Подробнее</a>
-				</li>
-				<li class="reviews__item">
-					<h3 class="reviews__item-title">Анна</h3>
-					<p class="reviews__text">
-						Давно выяснено, что при оценке дизайна и композиции читаемый
-						текст мешает . Lorem Ipsum используют потому,
-						что тот обеспечивает более или менее стандартное заполнение
-						шаблона, а также реальное.
-						Давно выяснено, что при оценке дизайна и композиции читаемый
-						текст мешает . Lorem Ipsum используют потому,
-						что тот обеспечивает более или менее стандартное заполнение
-						шаблона, а также реальное.
-					</p>
-					<a href="{% url 'reviews' %}" class="reviews__link">Подробнее</a>
-				</li>
-			</ul>
-			<a href="{% url 'reviews' %}" class="btn-reset more-btn">Все отзывы</a>
-		</div>
-	</section>
-	<section class="section section_gray contacts">
-		<div class="section__container">
-			<h2 class="section__title">Контакты</h2>
-			<div class="contacts__content">
-				<iframe class="contacts__map" aria-label="Studio address"  src="https://www.google.com/maps/embed
-				?pb=!1m18!1m12!1m3!1d4484.694468726258!2d37.53142449948547!3d55.80457194092636!2m3!1f0!2f0!3f0
-				!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b549c9b692c3f1%3A0x677b1d52bffc2c4b!2sCure%20Bar!5e0!3m2!1sru!2sru!4v1633222807632!5m2!1sru!2sru"
-						 allowfullscreen="" loading="lazy"></iframe>
-				<div class="contacts__info">
-					<div class="contacts__visit">
-						<h4 class="contacts__visit-title">Beauty Forest</h4>
-						<p class="contacts__visit-text">
-							Чтобы связаться с нами оставьте заявку на сайте
-							или позвоните по номеру:
-							<a href="tel:+12345678900" class="contacts__phone">+1 (234) 567 89 00</a>
+					<img src="{% static 'images/index/me.jpg' %}" alt="Our photo" class="about__image">
+				</div>
+				<a href="{% url 'contacts' %}" class="btn-reset more-btn more-btn_white">Больше про нас</a>
+			</div>
+		</section>
+		<section class="section reviews">
+			<div class="main__container">
+				<h2 class="main__title">Что про нас говорят</h2>
+				<ul class="list-reset section__grid reviews__list">
+					<li class="reviews__item">
+						<h3 class="reviews__item-title">Кристина</h3>
+						<p class="reviews__text">
+							Давно выяснено, что при оценке дизайна и композиции читаемый
+							текст мешает . Lorem Ipsum используют потому,
+							что тот обеспечивает более или менее стандартное заполнение
+							шаблона, а также реальное.
+							Давно выяснено, что при оценке дизайна и композиции читаемый
+							текст мешает . Lorem Ipsum используют потому,
+							что тот обеспечивает более или менее стандартное заполнение
+							шаблона, а также реальное.
 						</p>
-						<div class="contacts__social">
-							<a href="https://www.instagram.com/beauty_forest.nails/" class="contacts__social-link instagram-link" target="_blank"></a>
-							<a href="https://web.whatsapp.com" class="contacts__social-link whatsapp-link" target="_blank"></a>
+						<a href="{% url 'reviews' %}" class="reviews__link">Подробнее</a>
+					</li>
+					<li class="reviews__item">
+						<h3 class="reviews__item-title">Лев</h3>
+						<p class="reviews__text">
+							Давно выяснено, что при оценке дизайна и композиции читаемый
+							текст мешает . Lorem Ipsum используют потому,
+							что тот обеспечивает более или менее стандартное заполнение
+							шаблона, а также реальное.
+							Давно выяснено, что при оценке дизайна и композиции читаемый
+							текст мешает . Lorem Ipsum используют потому,
+							что тот обеспечивает более или менее стандартное заполнение
+							шаблона, а также реальное.
+						</p>
+						<a href="{% url 'reviews' %}" class="reviews__link">Подробнее</a>
+					</li>
+					<li class="reviews__item">
+						<h3 class="reviews__item-title">Анна</h3>
+						<p class="reviews__text">
+							Давно выяснено, что при оценке дизайна и композиции читаемый
+							текст мешает . Lorem Ipsum используют потому,
+							что тот обеспечивает более или менее стандартное заполнение
+							шаблона, а также реальное.
+							Давно выяснено, что при оценке дизайна и композиции читаемый
+							текст мешает . Lorem Ipsum используют потому,
+							что тот обеспечивает более или менее стандартное заполнение
+							шаблона, а также реальное.
+						</p>
+						<a href="{% url 'reviews' %}" class="reviews__link">Подробнее</a>
+					</li>
+				</ul>
+				<a href="{% url 'reviews' %}" class="btn-reset more-btn">Все отзывы</a>
+			</div>
+		</section>
+		<section class="section section_gray contacts">
+			<div class="main__container">
+				<h2 class="main__title">Контакты</h2>
+				<div class="contacts__content">
+					<iframe class="contacts__map" aria-label="Studio address"  src="https://www.google.com/maps/embed
+					?pb=!1m18!1m12!1m3!1d4484.694468726258!2d37.53142449948547!3d55.80457194092636!2m3!1f0!2f0!3f0
+					!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b549c9b692c3f1%3A0x677b1d52bffc2c4b!2sCure%20Bar!5e0!3m2!1sru!2sru!4v1633222807632!5m2!1sru!2sru"
+							 allowfullscreen="" loading="lazy"></iframe>
+					<div class="contacts__info">
+						<div class="contacts__visit">
+							<h4 class="contacts__visit-title">Beauty Forest</h4>
+							<p class="contacts__visit-text">
+								Чтобы связаться с нами оставьте заявку на сайте
+								или позвоните по номеру:
+								<a href="tel:+12345678900" class="contacts__phone">+1 (234) 567 89 00</a>
+							</p>
+							<div class="contacts__social">
+								<a href="https://www.instagram.com/beauty_forest.nails/" class="contacts__social-link instagram-link" target="_blank"></a>
+								<a href="https://web.whatsapp.com" class="contacts__social-link whatsapp-link" target="_blank"></a>
+							</div>
 						</div>
+						<a href="{% url 'contacts' %}" class="btn-reset more-btn more-btn_white">Оставить заявку</a>
 					</div>
-					<a href="{% url 'contacts' %}" class="btn-reset more-btn more-btn_white">Оставить заявку</a>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
+	</main>
 {% endblock %}

@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block static_files %}
-	<link rel="stylesheet" href="{% static 'services/style.css' %}">
+	<link rel="stylesheet" href="{% static 'services/services.css' %}">
 {% endblock %}
 
 {% block title %}
@@ -10,14 +10,33 @@
 {% endblock %}
 
 {% block content %}
-	<h3>Take a look on our services</h3>
-	<p>TIt is  infancy. Various
-		versions have evolved over the years, sometimes by accident,
-		sometimes on purpose (injected humour and the like).</p>
-	{% for service in services_list %}
-		<h6>{{ service.name }}</h6>
-		{{ service.price }}
-		<br>
-	{% endfor %}
-
+	<main class="main">
+		<div class="main__container">
+			<h1 class="main__title">Услуги</h1>
+			<div class="menu">
+{#				<form method="get">#}
+{#					<input type="button" value="100">#}
+{#					<input type="submit" value="152" class="menu__link">#}
+{#					<input type="submit" value="Педикюр" class="menu__link">#}
+{#					<input type="submit" value="Дизайн" class="menu__link">#}
+{#					<input type="submit" value="Комбо" class="menu__link">#}
+{#					<input type="submit" value="Снятие" class="menu__link">#}
+{#				</form>#}
+				<a href="#p1" id="p1" class="menu__link">Маникюр</a>
+				<a href="#p2" id="p2" class="menu__link">Педикюр</a>
+				<a href="#p3" id="p3" class="menu__link">Дизайн</a>
+				<a href="#p4" id="p4" class="menu__link">Комбо</a>
+				<a href="#p5" id="p5" class="menu__link">Снятие</a>
+			</div>
+			<ul class="list-reset services__list">
+				{% for service in services_list %}
+					<li class="services__item">
+						<div class="services__title">{{ service.name }}</div>
+						<div class="services__price">{{ service.price }}</div>
+					</li>
+				{% endfor %}
+			</ul>
+			<a href="{% url 'contacts' %}" class="btn-reset btn">Оставить заявку</a>
+		</div>
+	</main>
 {% endblock %}
