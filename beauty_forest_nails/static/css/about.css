@@ -1,0 +1,31 @@
+img {
+    white-space: nowrap;
+}
+.my-photo {
+    max-width: 300px;
+    margin: 0 20px 20px 0;
+    float: left;
+
+}
+
+.my-photo {
+    max-width: 300px;
+    margin: 0 20px 20px 0;
+    float: left;
+
+}
+
+.studio-title {
+    clear: both;
+}
+
+.studio-photo-list {
+    width: 100%;
+    /*padding: 0 20px;*/
+    display: flex;
+    justify-content: space-around;
+}
+
+.studio-photo-item {
+    max-width: 480px;
+}
