@@ -1,15 +1,27 @@
 {%  extends 'basis.html' %}
+{% load static %}
+
+{% block static_files %}
+	<link rel="stylesheet" href="{% static 'auth_reg/auth.css' %}">
+{% endblock %}
+
 {% block title %}
 	Registration
 {% endblock %}
+
 {% block content %}
-	<h3>Register on our site please</h3>
-	<form method="POST">
-		{% csrf_token %}
-		{{ form.username }}<br>
-		{{ form.email }}<br>
-		{{ form.password }}<br>
-		<button type="submit">Create user</button>
-	</form>
-	<p>{{ error }}</p>
+	<main class="main">
+		<div class="main__container">
+			<h1 class="main__title">Register</h1>
+			<form method="POST" class="auth-form">
+				{% csrf_token %}
+				{{ form.username }}<br><br>
+				{{ form.email }}<br><br>
+				{{ form.password }}<br><br>
+				<button type="submit" class="btn-login">Create user</button>
+			</form>
+{#			<a href="{% url 'register' %}" class="reg-link">Register</a>#}
+			<p>{{ error }}</p>
+		</div>
+	</main>
 {% endblock %}

@@ -1,17 +1,19 @@
 .menu {
     max-width: 980px;
     margin: 0 auto 20px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
-    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    /*border-radius: 5px;*/
 }
 
 .menu__link {
-    height: 30px;
+    /*height: 30px;*/
+    min-width: 150px;
+    padding: 5px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
 
     text-decoration: none;
     color: #000;
@@ -64,4 +66,8 @@
     background-color: #333;
     color: #fff;
     transform: scale(1.05);
+}
+
+.btn:target {
+    color: red;
 }

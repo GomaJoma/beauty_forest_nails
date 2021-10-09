@@ -1,0 +1,20 @@
+.main {
+    background-color: #ebebeb;
+}
+
+.auth-form {
+    width: 210px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.btn-login {
+    margin: 10px 0;
+}
+
+.reg-link {
+    width: 100px;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}

@@ -22,21 +22,23 @@
 {#					<input type="submit" value="Комбо" class="menu__link">#}
 {#					<input type="submit" value="Снятие" class="menu__link">#}
 {#				</form>#}
-				<a href="#p1" id="p1" class="menu__link">Маникюр</a>
-				<a href="#p2" id="p2" class="menu__link">Педикюр</a>
-				<a href="#p3" id="p3" class="menu__link">Дизайн</a>
-				<a href="#p4" id="p4" class="menu__link">Комбо</a>
-				<a href="#p5" id="p5" class="menu__link">Снятие</a>
+				<a href="{% url 'services' %}manicure#manicure_link" id="manicure_link" class="menu__link">Маникюр</a>
+				<a href="{% url 'services' %}pedicure#pedicure_link" id="pedicure_link" class="menu__link">Педикюр</a>
+				<a href="{% url 'services' %}design#design_link" id="design_link" class="menu__link">Дизайн</a>
+				<a href="{% url 'services' %}combo#combo_link" id="combo_link" class="menu__link">Комбо</a>
+				<a href="{% url 'services' %}cut#cut_link" id="cut_link" class="menu__link">Снятие</a>
+				<a href="{% url 'services' %}#all_link" id="all_link" class="menu__link">Все услуги</a>
 			</div>
 			<ul class="list-reset services__list">
+{#				<h2>{{ service_type }}</h2>#}
 				{% for service in services_list %}
 					<li class="services__item">
-						<div class="services__title">{{ service.name }}</div>
+						<div class="services__title">{{ service.title }}</div>
 						<div class="services__price">{{ service.price }}</div>
 					</li>
 				{% endfor %}
 			</ul>
-			<a href="{% url 'contacts' %}" class="btn-reset btn">Оставить заявку</a>
+			<a href="#btn" id="btn" class="btn-reset btn">Оставить заявку</a>
 		</div>
 	</main>
 {% endblock %}
